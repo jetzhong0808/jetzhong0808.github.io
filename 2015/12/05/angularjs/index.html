@@ -3,18 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>闲聊 | Airport</title>
+  <title>AngularJs常见问题 | Airport</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hexo挂到Git来了，也写了几篇文章，部分由于工作的特性不便放出，但在写技术总结的时候发现，在学习到新知识后用自己的想法和思路再去剖析和解释时，会有新的体验和收获，希望能在坚持的过程中进行积累。">
+  <meta name="description" content="最近使用ng开发时得到的体会，可以用来回答一下几个问题：1. angular的数据绑定采用什么机制？详述原理
+
+脏数据检查 != 轮询检查更新，不要以讹传讹了！！！谈起angular的dirty-checking, 常见的误解就是认为：ng是定时轮询去检查model是否变更。其实，ng只有在指定事件触发后，才进入$digest cycle：
+
+DOM事件，譬如用户输入文本，点击按钮等。(ng-cl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="闲聊">
-<meta property="og:url" content="http://yoursite.com/2015/12/05/post1/index.html">
+<meta property="og:title" content="AngularJs常见问题">
+<meta property="og:url" content="http://yoursite.com/2015/12/05/angularjs/index.html">
 <meta property="og:site_name" content="Airport">
-<meta property="og:description" content="Hexo挂到Git来了，也写了几篇文章，部分由于工作的特性不便放出，但在写技术总结的时候发现，在学习到新知识后用自己的想法和思路再去剖析和解释时，会有新的体验和收获，希望能在坚持的过程中进行积累。">
-<meta property="og:updated_time" content="2015-12-04T16:24:35.417Z">
+<meta property="og:description" content="最近使用ng开发时得到的体会，可以用来回答一下几个问题：1. angular的数据绑定采用什么机制？详述原理
+
+脏数据检查 != 轮询检查更新，不要以讹传讹了！！！谈起angular的dirty-checking, 常见的误解就是认为：ng是定时轮询去检查model是否变更。其实，ng只有在指定事件触发后，才进入$digest cycle：
+
+DOM事件，譬如用户输入文本，点击按钮等。(ng-cl">
+<meta property="og:updated_time" content="2015-12-05T09:10:41.675Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="闲聊">
-<meta name="twitter:description" content="Hexo挂到Git来了，也写了几篇文章，部分由于工作的特性不便放出，但在写技术总结的时候发现，在学习到新知识后用自己的想法和思路再去剖析和解释时，会有新的体验和收获，希望能在坚持的过程中进行积累。">
+<meta name="twitter:title" content="AngularJs常见问题">
+<meta name="twitter:description" content="最近使用ng开发时得到的体会，可以用来回答一下几个问题：1. angular的数据绑定采用什么机制？详述原理
+
+脏数据检查 != 轮询检查更新，不要以讹传讹了！！！谈起angular的dirty-checking, 常见的误解就是认为：ng是定时轮询去检查model是否变更。其实，ng只有在指定事件触发后，才进入$digest cycle：
+
+DOM事件，譬如用户输入文本，点击按钮等。(ng-cl">
   
     <link rel="alternative" href="/atom.xml" title="Airport" type="application/atom+xml">
   
@@ -191,11 +203,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-post1" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-angularjs" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/05/post1/" class="article-date">
-  	<time datetime="2015-12-04T16:07:33.000Z" itemprop="datePublished">2015-12-05</time>
+      <a href="/2015/12/05/angularjs/" class="article-date">
+  	<time datetime="2015-12-05T08:24:16.000Z" itemprop="datePublished">2015-12-05</time>
 </a>
     </div>
   
@@ -208,7 +220,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      闲聊
+      AngularJs常见问题
     </h1>
   
 
@@ -217,7 +229,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闲聊/">闲聊</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJs/">AngularJs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 	</div>
 
         
@@ -228,8 +240,51 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><code>Hexo</code>挂到<code>Git</code>来了，也写了几篇文章，部分由于工作的特性不便放出，但在写技术总结的时候发现，在学习到新知识后用自己的想法和思路再去剖析和解释时，会有新的体验和收获，希望能在坚持的过程中进行积累。</p>
-
+        <h2 id="最近使用ng开发时得到的体会，可以用来回答一下几个问题：">最近使用ng开发时得到的体会，可以用来回答一下几个问题：</h2><p><strong>1. angular的数据绑定采用什么机制？详述原理</strong></p>
+<blockquote>
+<p><strong>脏数据检查 != 轮询检查更新，不要以讹传讹了！！！</strong><br>谈起angular的dirty-checking, 常见的误解就是认为：ng是定时轮询去检查model是否变更。<br>其实，ng只有在指定事件触发后，才进入$digest cycle：</p>
+<ul>
+<li>DOM事件，譬如用户输入文本，点击按钮等。(ng-click)</li>
+<li>XHR响应事件 (http)</li>
+<li>浏览器Location变更事件 (location)</li>
+<li>Timer事件(timeout, interval)</li>
+<li>执行$digest()或apply()<br>原理可以参考：<br><a href="https://github.com/atian25/blog/issues/5" target="_blank" rel="external">AngularJS性能优化心得</a><br><a href="https://github.com/xufei/blog/issues/10" target="_blank" rel="external">Angular沉思录（一）数据绑定</a><br><a href="https://github.com/xufei/Make-Your-Own-AngularJS/blob/master/01.md" target="_blank" rel="external">构建自己的AngularJS，第一部分：Scope和Digest</a></li>
+</ul>
+</blockquote>
+<p>这个问题往往制约着项目架构的选型倾向，如果注重于双向绑定的性能可以考虑使用<code>vue.js</code><br>目前正在进行的项目中，当数据条目达到2K时，会出现前端性能的瓶颈</p>
+<p><strong>2. 两个同级组件a和b，如果a中触发一个事件，有哪些方式能让b知道，详述原理</strong></p>
+<blockquote>
+<p>两个controller之间进行交互可以通过<code>父作用域</code>数据共享。在<code>directive</code>使用<code>scope:{=}</code>即可对父元素作用域元素进行双向绑定了(注意处理冲突)</p>
+</blockquote>
+<p><strong>3. 一个angular应用应当如何良好地分层？</strong></p>
+<blockquote>
+<p>私以为controller应该尽可能的瘦，相关的业务逻辑和数据处理放在service层中，然后可重用封装后的组件使用directive</p>
+</blockquote>
+<p><strong>4. angular应用常用哪些路由库，各自的区别是什么？</strong></p>
+<blockquote>
+<p>ngRouter和ui.router，后者支持<code>&lt;ui-view&gt;</code>嵌套路由</p>
+</blockquote>
+<p><strong>5. ng-if跟ng-show/hide的区别有哪些？</strong></p>
+<blockquote>
+<p>前者决定否会生成DOM元素，后者决定是否隐藏DOM元素。区别就在于DOM元素是否会被生成</p>
+</blockquote>
+<p><strong>6. ng-repeat迭代数组的时候，如果数组中有相同值，会有什么问题，如何解决？</strong></p>
+<blockquote>
+<p>理论上来说ng-repeat是不允许有重复值的，如有必要可使用track by来区别</p>
+</blockquote>
+<p><strong>7. ng-click中写的表达式，能使用JS原生对象上的方法，比如Math.max之类的吗？为什么？</strong></p>
+<blockquote>
+<p>会默认调用$scope.Math.max</p>
+</blockquote>
+<p><strong>8. {now | “yyyy-MM-dd”}这种表达式里面，竖线和后面的参数通过什么方式可以自定义？</strong></p>
+<blockquote>
+<p>filter</p>
+</blockquote>
+<p><strong>9. factory和service，provider是什么关系？</strong></p>
+<blockquote>
+<p>这个问题比较大，也是很经典的问题，至今没有看到非常详尽的解释<br>部分信息可参考<a href="http://www.oschina.net/translate/angularjs-factory-vs-service-vs-provider" target="_blank" rel="external">AngularJS 之 Factory vs Service vs Provider</a><br><code>factory</code>和<code>service</code>，<code>provider</code>是层级封装的关系，它们都是单例模式<br>最底层的provider一般作为.config()函数的专属依赖服务<br>中间的service通过构造函数创建对象<br>顶层的factory通过工厂函数创建对象</p>
+</blockquote>
+<h1 id="Next:Angular_dirty_check原理">Next:Angular dirty check原理</h1>
       
     </div>
     
@@ -238,18 +293,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/12/05/angularjs/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          AngularJs常见问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/12/04/promise/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Promise和Deffered学习笔记</div>
+    <a href="/2015/12/05/post1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">闲聊</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -278,7 +324,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="post1" data-title="闲聊" data-url="http://yoursite.com/2015/12/05/post1/"></div>
+	<div class="ds-thread" data-thread-key="angularjs" data-title="AngularJs常见问题" data-url="http://yoursite.com/2015/12/05/angularjs/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
