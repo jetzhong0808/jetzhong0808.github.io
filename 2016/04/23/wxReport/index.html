@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>微信认证数据平台优化实战 | jetzhong&#39;s gitPage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#微信认证数据平台优化实战
+微信认证数据平台为微信认证服务供应商认证数据的报表服务平台，通过结构化的数据指标来评估微信认证服务供应商的处理效率，并能对系统的在途认证单进行监控和预警，为业务流程的有效执行提供了保障。本次优化旨在“尽快”解决目前系统存在报表查询时间过长，甚至不可用的问题。
+
+一、前期准备
+用户&amp;amp;场景:该功能的用户主要分为微信运营和服采商务，使用场景均为选定日期范围，对指定的订">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信认证数据平台优化实战">
+<meta property="og:url" content="http://yoursite.com/2016/04/23/wxReport/index.html">
+<meta property="og:site_name" content="jetzhong's gitPage">
+<meta property="og:description" content="#微信认证数据平台优化实战
+微信认证数据平台为微信认证服务供应商认证数据的报表服务平台，通过结构化的数据指标来评估微信认证服务供应商的处理效率，并能对系统的在途认证单进行监控和预警，为业务流程的有效执行提供了保障。本次优化旨在“尽快”解决目前系统存在报表查询时间过长，甚至不可用的问题。
+
+一、前期准备
+用户&amp;amp;场景:该功能的用户主要分为微信运营和服采商务，使用场景均为选定日期范围，对指定的订">
+<meta property="og:image" content="http://yoursite.com/../img/data1.png">
+<meta property="og:image" content="http://yoursite.com/../img/data2.png">
+<meta property="og:image" content="http://yoursite.com/../img/data3.png">
+<meta property="og:updated_time" content="2016-04-23T10:10:02.364Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="微信认证数据平台优化实战">
+<meta name="twitter:description" content="#微信认证数据平台优化实战
+微信认证数据平台为微信认证服务供应商认证数据的报表服务平台，通过结构化的数据指标来评估微信认证服务供应商的处理效率，并能对系统的在途认证单进行监控和预警，为业务流程的有效执行提供了保障。本次优化旨在“尽快”解决目前系统存在报表查询时间过长，甚至不可用的问题。
+
+一、前期准备
+用户&amp;amp;场景:该功能的用户主要分为微信运营和服采商务，使用场景均为选定日期范围，对指定的订">
+  
+    <link rel="alternative" href="/atom.xml" title="jetzhong&#39;s gitPage" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">jetzhong</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">jetzhong&#39;s gitPage</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/jetzhong0808/" title="github">github</a>
+					        
+								<a class="facebook" target="_blank" href="/#" title="facebook">facebook</a>
+					        
+								<a class="twitter" target="_blank" href="/#" title="twitter">twitter</a>
+					        
+								<a class="linkedin" target="_blank" href="/#" title="linkedin">linkedin</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/AngularJs/" style="font-size: 10px;">AngularJs</a> <a href="/tags/Deffered/" style="font-size: 10px;">Deffered</a> <a href="/tags/Promise/" style="font-size: 10px;">Promise</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/闲聊/" style="font-size: 10px;">闲聊</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">jetzhong</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="null" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">jetzhong</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">jetzhong&#39;s gitPage</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/jetzhong0808/" title="github">github</a>
+			        
+						<a class="facebook" target="_blank" href="/#" title="facebook">facebook</a>
+			        
+						<a class="twitter" target="_blank" href="/#" title="twitter">twitter</a>
+			        
+						<a class="linkedin" target="_blank" href="/#" title="linkedin">linkedin</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-wxReport" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/23/wxReport/" class="article-date">
+  	<time datetime="2016-04-23T10:03:35.000Z" itemprop="datePublished">2016-04-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      微信认证数据平台优化实战
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#微信认证数据平台优化实战</p>
+<p><strong>微信认证数据平台</strong>为微信认证服务供应商认证数据的报表服务平台，通过结构化的数据指标来评估微信认证服务供应商的处理效率，并能对系统的在途认证单进行监控和预警，为业务流程的有效执行提供了保障。<strong>本次优化旨在“尽快”解决目前系统存在报表查询时间过长，甚至不可用的问题</strong>。</p>
+<hr>
+<h2 id="一、前期准备">一、前期准备</h2><ol>
+<li><strong>用户&amp;场景:</strong><br>该功能的用户主要分为微信运营和服采商务，使用场景均为选定日期范围，对指定的订单类型、供应商和认证类型进行统计查询。其中会<strong>高频使用查询近期或指定周(月)</strong>的报表，<strong>低频查询指定季度或年度</strong>的数据。对数据实时性要求不高，能够容忍一天的有效性延迟。查询速度没有特别高的要求，但是起码得能查出来。</li>
+<li><strong>工程环境:</strong><br>Web服务器使用C#、.NET4.0/MVC框架。数据库使用SqlServer2008R2，数据表10+，其中<strong>状态表A千万级</strong>，<strong>单据表B百万级</strong>。另含两个Windows服务，一个用于接收微信实时推过来的数据，一个用于数据整理。</li>
+<li><p><strong>对比数据:</strong><br>既然是旨在优化，那么需要收集用例的<strong>性能数据</strong>用于比较，另外还需要收集<strong>报表数据用例</strong>用于校验。<br><img src="/../img/data1.png" alt="性能数据"><br>报表数据将会放在优化结果中进行对比。</p>
+</li>
+<li><p><strong>问题统计:</strong><br>报表统计查询慢一般在于<strong>数据库或者计算瓶颈</strong>。提前做好统计调研，优化时才能做到有的放矢：</p>
+<ul>
+<li><strong>SQL查询开销大</strong>:6个存储过程<em>21条复杂sql语句，高频次使用的计算函数。其中sql的<em>*平均查询速度为20+秒/条</em></em>；</li>
+<li><strong>历史（低频次）数据堆积</strong> :数据表AB中存在海量<strong>历史数据，使用频度极低</strong>。在作基础数据联合查询时会造成大量开销；</li>
+<li><strong>报表计算逻辑复杂</strong>:在认证过程中，单据的<strong>状态丰富</strong>，<strong>流程多向</strong>，学习成本较高；</li>
+</ul>
+</li>
+</ol>
+<h2 id="二、方案拟定">二、方案拟定</h2><p>针对前期准备中收集的信息和统计的问题，可以从业务和技术两个角度来思考优化方案。</p>
+<h3 id="业务侧">业务侧</h3><blockquote>
+<p><strong>用户&amp;场景:</strong>对数据实时性要求不高，能够容忍一天的有效性延迟。查询速度没有特别高的要求，但是起码得能查出来。</p>
+</blockquote>
+<p>从使用场景来看，可以考虑采用<strong>基础数据缓存</strong>来减少数据库复杂查询的次数。至于哪些数据需要缓存，则要在使用频度较高和开销较大的sql语句分析中得出。<br>那么有了缓存就还得要<strong>更新缓存</strong>来提高数据的有效性。结合现有的框架资源和本着“尽快解决”的初衷，决定开放一个更新缓存的webService由EPO框架在凌晨定时调用，同时在系统页面上开放手动更新的功能，解决用户对数据有效性的临时需求。</p>
+<h3 id="技术侧">技术侧</h3><p>在前期准备的问题统计部分可以了解到，整体来看优化的方向有三个：SQL调优、基础数据并缓存、计算优化。</p>
+<ul>
+<li>数据库：</li>
+</ul>
+<ol>
+<li><strong>sql语句优化，过滤条件前置</strong></li>
+<li><strong>善用sql分析工具，针对表扫描开销建立索引(聚集/非聚集)</strong></li>
+<li><strong>分析同类sql语句，缓存AB表的基础数据</strong></li>
+</ol>
+<ul>
+<li><p>计算：</p>
+<blockquote>
+<p>有个故事大家应该都听过：高考老师说，数学成绩好的同学就不要过分纠结90分提高到95分，多花心思把语文从60提到80。这是非常具有指导意义的，要讲究投资回报比，好钢得用在刀刃上才能事半功倍。</p>
+</blockquote>
+<p>  计算的业务逻辑由于改动成本太高，在“尽快解决”的目标下就保持原样了。但是！从计算的技术角度来看，在by单计算时，可以把数据做好分类(<verifyid,datalist<t>&gt;)，然后利用.Net4.0的新特性<strong>Parallel.foreach</strong>来处理并行计算。<strong>在并行处理的过程中注意好变量的线程安全问题</strong>即可。<br>  在windows服务中的timer(3s*3)由于脚本执行时间过长，会导致大量并发的timer访问数据库而连接暴涨最终因达到连接池最大值报错。这里同样对sql脚本优化后，减少执行时间，同时为了确保连接数量的稳定，用多线程循环同步执行。</verifyid,datalist<t></p>
+  <figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span><span class="comment">(flag)</span>&#123;</span><br><span class="line">    accessDataBase<span class="comment">()</span>;</span><br><span class="line">    thread.sleep<span class="comment">(config)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="三、优化结果">三、优化结果</h2><p>性能数据：<br><img src="/../img/data2.png" alt="性能数据"><br>验证数据：<br><img src="/../img/data3.png" alt="验证数据"></p>
+<h2 id="四、总结">四、总结</h2><blockquote>
+<p><strong>如何用技术解决具体问题是武功招式，如何在特定环境下剖析问题是内功心法。比武时要靠招式来击败对手，招式要靠心法来融会贯通。在此次实战过程中思考问题的方向和做事的条理与后期使用的XXX技术同样重要</strong></p>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/12/05/angularjs1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">记一下ng踩过的坑！</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="wxReport" data-title="微信认证数据平台优化实战" data-url="http://yoursite.com/2016/04/23/wxReport/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 jetzhong
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
