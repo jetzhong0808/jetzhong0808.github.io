@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/AngularJs/" style="font-size: 10px;">AngularJs</a> <a href="/tags/CMD/" style="font-size: 10px;">CMD</a> <a href="/tags/Deffered/" style="font-size: 10px;">Deffered</a> <a href="/tags/Promise/" style="font-size: 10px;">Promise</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/闲聊/" style="font-size: 10px;">闲聊</a>
+						<a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/AngularJs/" style="font-size: 10px;">AngularJs</a> <a href="/tags/CMD/" style="font-size: 10px;">CMD</a> <a href="/tags/Deffered/" style="font-size: 10px;">Deffered</a> <a href="/tags/PPT/" style="font-size: 10px;">PPT</a> <a href="/tags/Promise/" style="font-size: 10px;">Promise</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/总结汇报/" style="font-size: 10px;">总结汇报</a> <a href="/tags/逻辑表达/" style="font-size: 10px;">逻辑表达</a> <a href="/tags/闲聊/" style="font-size: 10px;">闲聊</a>
 					</div>
 				</section>
 				
@@ -192,11 +192,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-Program in module" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-logic" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/10/Program in module/" class="article-date">
-  	<time datetime="2016-08-10T14:42:34.000Z" itemprop="datePublished">2016-08-10</time>
+      <a href="/2016/08/17/logic/" class="article-date">
+  	<time datetime="2016-08-17T03:42:34.000Z" itemprop="datePublished">2016-08-17</time>
 </a>
     </div>
   
@@ -209,7 +209,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/10/Program in module/">前端模块化</a>
+      <a class="article-title" href="/2016/08/17/logic/">逻辑表达轻松学</a>
     </h1>
   
 
@@ -218,22 +218,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Javascript模块化"><a href="http://www.ruanyifeng.com/blog/2012/10/javascript_module.html" target="_blank" rel="external">Javascript模块化</a></h1><h2 id="1_基础知识">1 基础知识</h2><p>1 函数 污染<br>2 对象 篡改<br>3 立即执行函数 扩展<br>4 放大模式 继承<br>5 宽放大模式 判空<br>6 输入全局变量 独立性</p>
-<h2 id="2_CommonJS、AMD进阶">2 CommonJS、AMD进阶</h2><h3 id="2-1_CommonJS">2.1 CommonJS</h3><p>nodejs(服务器语言)参照CommonJS<br>典型:<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//CommonJS加载模块</span></span><br><span class="line"><span class="keyword">var</span> math = <span class="keyword">require</span>(<span class="string">'math'</span>);</span><br><span class="line">math.<span class="keyword">add</span>(<span class="number">2</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure></p>
-<h3 id="2-2_AMD">2.2 AMD</h3><p>服务器模块也想兼容客户端环境<br>问题：<br>1、服务端模块都是本地化，可以同步执行<br>2、客户端模块需要远程加载，异步执行，影响下文语句执行</p>
-<p>产生环境：<br>Asynchronous Modules Definition 异步模块加载<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">require</span>([<span class="class"><span class="keyword">module</span>], <span class="title">callback</span>);</span></span><br></pre></td></tr></table></figure></p>
-<p>module为加载的模块，callback为加载成功后的回调<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="string">'math'</span>],<span class="function"><span class="keyword">function</span><span class="params">(math)</span></span>&#123;</span><br><span class="line">	<span class="built_in">math</span>.add(<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>用回调方式编码，加载模块和执行语句不是同步的</p>
-<h2 id="3_requireJS">3 requireJS</h2><p>1 为什么用？<br>原始：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">""</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">""</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>问题：<br>· 加载脚本时，浏览器停止网页渲染 //放网页底部或者使用：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/require.js"</span> <span class="attribute">defer</span> <span class="attribute">async</span>=<span class="value">"true"</span> &gt;</span><span class="undefined"></span></span><br></pre></td></tr></table></figure></p>
-<p>IE不支持async，仅支持defer<br>· 保证加载顺序<br>解决：<br>·异步加载脚本<br>·管理脚本依赖</p>
-<h3 id="3-1_怎么用？">3.1 怎么用？</h3><p>引入：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/require.js"</span> <span class="attribute">data-main</span>=<span class="value">"js/main"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>加载：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="string">'jquery'</span>],<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</span><br><span class="line">	<span class="comment">// do sth</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>定义:<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">require</span><span class="built_in">.</span>config(<span class="attribute">...</span>path,shim<span class="attribute">...</span>)</span><br></pre></td></tr></table></figure></p>
-<p>要求:<br>requireJS要求加载的模块也是AMD规范<br>如果此模块还依赖其他模块<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">define([<span class="string">'lib'</span>],function(<span class="class"><span class="keyword">lib</span>)&#123;</span></span><br><span class="line">	function foo()&#123;</span><br><span class="line">		<span class="class"><span class="keyword">lib</span>.<span class="title">do</span>()</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">		<span class="symbol">foo:</span> foo</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>这样require()函数在加载此模块时，会先加载lib.js</p>
-<p>非AMD规范的模块怎么办？<br>require.config(…shim…)配置shim依赖deps和输出exports</p>
-<p><strong>AMD(RequireJS)讲究的是前置执行<br>CMD(SeaJS)规范，全称”Common Module Definition”，称为 通用模块加载规范，倾向依赖就近<br>CommonJS(NodeJS)规范，一个单独的文件就是一个模块。每一个模块都是一个单独的作用域。加载模块采用的是同步方式。<br>UMD规范(Universal Module Definition)</strong></p>
+        <p><img src="/../img/logic/0.png" alt="0"><br><img src="/../img/logic/1.png" alt="1"><br><img src="/../img/logic/2.png" alt="2"><br><img src="/../img/logic/3.png" alt="3"><br><img src="/../img/logic/4.png" alt="4"><br><img src="/../img/logic/5.png" alt="5"><br><img src="/../img/logic/6.png" alt="6"><br><img src="/../img/logic/7.png" alt="7"><br><img src="/../img/logic/8.png" alt="8"><br><img src="/../img/logic/9.png" alt="9"><br><img src="/../img/logic/10.png" alt="10"><br><img src="/../img/logic/11.png" alt="11"><br><img src="/../img/logic/12.png" alt="12"><br><img src="/../img/logic/13.png" alt="13"><br><img src="/../img/logic/14.png" alt="14"><br><img src="/../img/logic/15.png" alt="15"><br><img src="/../img/logic/16.png" alt="16"><br><img src="/../img/logic/17.png" alt="17"><br><img src="/../img/logic/18.png" alt="18"><br><img src="/../img/logic/19.png" alt="19"><br><img src="/../img/logic/20.png" alt="20"><br><img src="/../img/logic/21.png" alt="21"><br><img src="/../img/logic/22.png" alt="22"><br><img src="/../img/logic/23.png" alt="23"><br><img src="/../img/logic/24.png" alt="24"><br><img src="/../img/logic/25.png" alt="25"></p>
 
       
     </div>
@@ -242,7 +227,7 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AMD/">AMD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CMD/">CMD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PPT/">PPT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结汇报/">总结汇报</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/逻辑表达/">逻辑表达</a></li></ul>
 	</div>
 
       
@@ -265,8 +250,8 @@
     <article id="post-Hololens" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/10/Hololens/" class="article-date">
-  	<time datetime="2016-08-10T08:29:08.805Z" itemprop="datePublished">2016-08-10</time>
+      <a href="/2016/08/17/Hololens/" class="article-date">
+  	<time datetime="2016-08-17T02:53:17.786Z" itemprop="datePublished">2016-08-17</time>
 </a>
     </div>
   
@@ -279,7 +264,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/10/Hololens/">Hololens, bring ideas to life.(Part 1)</a>
+      <a class="article-title" href="/2016/08/17/Hololens/">Hololens, bring ideas to life.(Part 1)</a>
     </h1>
   
 
@@ -335,6 +320,76 @@
     <div class="article-info article-info-index">
       
       
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Program in module" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/10/Program in module/" class="article-date">
+  	<time datetime="2016-08-10T14:42:34.000Z" itemprop="datePublished">2016-08-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/10/Program in module/">前端模块化</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Javascript模块化"><a href="http://www.ruanyifeng.com/blog/2012/10/javascript_module.html" target="_blank" rel="external">Javascript模块化</a></h1><h2 id="1_基础知识">1 基础知识</h2><p>1 函数 污染<br>2 对象 篡改<br>3 立即执行函数 扩展<br>4 放大模式 继承<br>5 宽放大模式 判空<br>6 输入全局变量 独立性</p>
+<h2 id="2_CommonJS、AMD进阶">2 CommonJS、AMD进阶</h2><h3 id="2-1_CommonJS">2.1 CommonJS</h3><p>nodejs(服务器语言)参照CommonJS<br>典型:<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//CommonJS加载模块</span></span><br><span class="line"><span class="keyword">var</span> math = <span class="keyword">require</span>(<span class="string">'math'</span>);</span><br><span class="line">math.<span class="keyword">add</span>(<span class="number">2</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-2_AMD">2.2 AMD</h3><p>服务器模块也想兼容客户端环境<br>问题：<br>1、服务端模块都是本地化，可以同步执行<br>2、客户端模块需要远程加载，异步执行，影响下文语句执行</p>
+<p>产生环境：<br>Asynchronous Modules Definition 异步模块加载<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">require</span>([<span class="class"><span class="keyword">module</span>], <span class="title">callback</span>);</span></span><br></pre></td></tr></table></figure></p>
+<p>module为加载的模块，callback为加载成功后的回调<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="string">'math'</span>],<span class="function"><span class="keyword">function</span><span class="params">(math)</span></span>&#123;</span><br><span class="line">	<span class="built_in">math</span>.add(<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>用回调方式编码，加载模块和执行语句不是同步的</p>
+<h2 id="3_requireJS">3 requireJS</h2><p>1 为什么用？<br>原始：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">""</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">""</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>问题：<br>· 加载脚本时，浏览器停止网页渲染 //放网页底部或者使用：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/require.js"</span> <span class="attribute">defer</span> <span class="attribute">async</span>=<span class="value">"true"</span> &gt;</span><span class="undefined"></span></span><br></pre></td></tr></table></figure></p>
+<p>IE不支持async，仅支持defer<br>· 保证加载顺序<br>解决：<br>·异步加载脚本<br>·管理脚本依赖</p>
+<h3 id="3-1_怎么用？">3.1 怎么用？</h3><p>引入：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/require.js"</span> <span class="attribute">data-main</span>=<span class="value">"js/main"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>加载：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="string">'jquery'</span>],<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</span><br><span class="line">	<span class="comment">// do sth</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>定义:<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">require</span><span class="built_in">.</span>config(<span class="attribute">...</span>path,shim<span class="attribute">...</span>)</span><br></pre></td></tr></table></figure></p>
+<p>要求:<br>requireJS要求加载的模块也是AMD规范<br>如果此模块还依赖其他模块<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">define([<span class="string">'lib'</span>],function(<span class="class"><span class="keyword">lib</span>)&#123;</span></span><br><span class="line">	function foo()&#123;</span><br><span class="line">		<span class="class"><span class="keyword">lib</span>.<span class="title">do</span>()</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">		<span class="symbol">foo:</span> foo</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>这样require()函数在加载此模块时，会先加载lib.js</p>
+<p>非AMD规范的模块怎么办？<br>require.config(…shim…)配置shim依赖deps和输出exports</p>
+<p><strong>AMD(RequireJS)讲究的是前置执行<br>CMD(SeaJS)规范，全称”Common Module Definition”，称为 通用模块加载规范，倾向依赖就近<br>CommonJS(NodeJS)规范，一个单独的文件就是一个模块。每一个模块都是一个单独的作用域。加载模块采用的是同步方式。<br>UMD规范(Universal Module Definition)</strong></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AMD/">AMD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CMD/">CMD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
       
 
       
